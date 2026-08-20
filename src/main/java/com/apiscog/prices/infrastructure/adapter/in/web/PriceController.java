@@ -1,8 +1,8 @@
-package com.apiscog.prices.adapter.in.web;
+package com.apiscog.prices.infrastructure.adapter.in.web;
 
-import com.apiscog.prices.adapter.in.web.error.ApiProblemResponse;
 import com.apiscog.prices.application.port.in.FindApplicablePriceQuery;
 import com.apiscog.prices.application.port.in.FindApplicablePriceUseCase;
+import com.apiscog.prices.infrastructure.adapter.in.web.error.ApiProblemResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;

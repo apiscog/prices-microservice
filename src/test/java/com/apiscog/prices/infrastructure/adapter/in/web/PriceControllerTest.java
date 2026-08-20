@@ -1,4 +1,4 @@
-package com.apiscog.prices.adapter.in.web;
+package com.apiscog.prices.infrastructure.adapter.in.web;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

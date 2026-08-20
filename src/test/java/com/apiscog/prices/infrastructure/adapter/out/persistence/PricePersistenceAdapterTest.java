@@ -1,4 +1,4 @@
-package com.apiscog.prices.adapter.out.persistence;
+package com.apiscog.prices.infrastructure.adapter.out.persistence;
 
 import com.apiscog.prices.application.port.in.FindApplicablePriceQuery;
 import com.apiscog.prices.application.port.out.LoadApplicablePricePort;

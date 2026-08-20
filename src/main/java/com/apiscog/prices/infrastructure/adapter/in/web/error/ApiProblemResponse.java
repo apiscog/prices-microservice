@@ -1,4 +1,4 @@
-package com.apiscog.prices.adapter.in.web.error;
+package com.apiscog.prices.infrastructure.adapter.in.web.error;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 

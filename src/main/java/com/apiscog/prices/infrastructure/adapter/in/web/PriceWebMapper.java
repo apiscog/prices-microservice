@@ -1,4 +1,4 @@
-package com.apiscog.prices.adapter.in.web;
+package com.apiscog.prices.infrastructure.adapter.in.web;
 
 import com.apiscog.prices.domain.model.Price;
 import org.springframework.stereotype.Component;

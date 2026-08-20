@@ -1,4 +1,4 @@
-package com.apiscog.prices.adapter.in.web.error;
+package com.apiscog.prices.infrastructure.adapter.in.web.error;
 
 import com.apiscog.prices.application.exception.PriceNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;

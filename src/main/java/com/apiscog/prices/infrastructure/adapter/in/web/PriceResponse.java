@@ -1,4 +1,4 @@
-package com.apiscog.prices.adapter.in.web;
+package com.apiscog.prices.infrastructure.adapter.in.web;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 

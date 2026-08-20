@@ -1,4 +1,4 @@
-package com.apiscog.prices.adapter.out.persistence;
+package com.apiscog.prices.infrastructure.adapter.out.persistence;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

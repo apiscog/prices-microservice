@@ -1,4 +1,4 @@
-package com.apiscog.prices.config;
+package com.apiscog.prices.infrastructure.config;
 
 import com.apiscog.prices.application.port.in.FindApplicablePriceUseCase;
 import com.apiscog.prices.application.port.out.LoadApplicablePricePort;
