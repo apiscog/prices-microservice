@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: prices-api
+  labels:
+    app.kubernetes.io/name: prices-microservice
+    app.kubernetes.io/component: api
+    app.kubernetes.io/part-of: prices-microservice
+    app.kubernetes.io/version: "0.0.1"
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: prices-microservice
+    app.kubernetes.io/component: api
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+      protocol: TCP
