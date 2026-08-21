@@ -1,0 +1,53 @@
+services:
+  prices-api:
+    image: prices-microservice:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_CACHE_TYPE: redis
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+      PRICE_CACHE_TTL: 10m
+      REDIS_CONNECT_TIMEOUT: 250ms
+      REDIS_TIMEOUT: 250ms
+      MANAGEMENT_HEALTH_REDIS_ENABLED: "true"
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "--silent", "--show-error", "http://localhost:8080/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+    init: true
+    restart: "no"
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+  redis:
+    image: redis:7.4.10
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    user: redis
+    healthcheck:
+      test: ["CMD", "redis-cli", "PING"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+      start_period: 5s
+    restart: "no"
+    read_only: true
+    tmpfs:
+      - /data:rw,noexec,nosuid,size=16m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
